@@ -1,11 +1,14 @@
 * {
     margin:0;
     padding:0;
-    border: solid 1px green
+    border: solid 1px green;
 }
 
 #container {
     width: 800px;
     height: 800px;
     display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
