@@ -4,11 +4,26 @@
 
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(2, 2, 105);
+}
+
 #container {
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     display: flex;
     align-content: stretch;
     justify-content: space-evenly;
     flex-direction: column;
+    border: rgb(106, 106, 255) 10px solid;
+    border-radius: 10px;
+    background-color: rgb(195, 195, 248)
+}
+
+#size {
+    margin: 10px;
 }
