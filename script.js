@@ -24,7 +24,10 @@ const createGrid = (size) => {
             let segment = document.createElement('div');
             segment.style.flexGrow = '1';
             segment.addEventListener("mouseover", () => {
-                segment.style.backgroundColor = "black";
+                let r = Math.floor(Math.random() * 256);
+                let g = Math.floor(Math.random() * 256);
+                let b = Math.floor(Math.random() * 256);
+                segment.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             })
             row.appendChild(segment);
         }
