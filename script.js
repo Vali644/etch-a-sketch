@@ -1,4 +1,4 @@
-document.addEventListener("click", () => {
+document.getElementById("size").addEventListener("click", () => {
     deleteGrid();
 })
 const changeSize = () => {
