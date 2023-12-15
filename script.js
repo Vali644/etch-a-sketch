@@ -1,5 +1,5 @@
 document.addEventListener("click", () => {
-
+    deleteGrid();
 })
 const changeSize = () => {
     while (true) {
@@ -17,6 +17,7 @@ const createGrid = (size) => {
     for (let i = 0; i < size; i++) {
         row = document.createElement('div');
         row.style.cssText = "flex-grow: 1; display: flex; align-content: stretch;"
+        row.classList.add("row");
         for (let i = 0; i < size; i++) {
             let segment = document.createElement('div');
             segment.style.flexGrow = '1';
@@ -30,7 +31,8 @@ const createGrid = (size) => {
 }
 
 const deleteGrid = () => {
-    
+    nodesToDelete = document.querySelectorAll(".row");
+    nodesToDelete.forEach((toDelete) => toDelete.remove());
 }
 
 createGrid(64);
