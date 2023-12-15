@@ -1,5 +1,6 @@
 document.getElementById("size").addEventListener("click", () => {
     deleteGrid();
+    changeSize();
 })
 const changeSize = () => {
     while (true) {
@@ -9,6 +10,7 @@ const changeSize = () => {
             break;
         }
     }
+    createGrid(input);
 }
 
 const createGrid = (size) => {
