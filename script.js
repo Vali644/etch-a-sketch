@@ -1,3 +1,16 @@
+document.addEventListener("click", () => {
+
+})
+const changeSize = () => {
+    while (true) {
+        input = prompt("Input new size between 1 and 100 inclusive. This will delete any drawings.");
+        input = parseInt(input);
+        if (input != NaN && input > 0 && input <= 100) {
+            break;
+        }
+    }
+}
+
 const createGrid = (size) => {
     const container = document.querySelector("#container");
     let row;
@@ -7,7 +20,6 @@ const createGrid = (size) => {
         for (let i = 0; i < size; i++) {
             let segment = document.createElement('div');
             segment.style.flexGrow = '1';
-            let s = segment;
             segment.addEventListener("mouseover", () => {
                 segment.style.backgroundColor = "black";
             })
@@ -16,4 +28,9 @@ const createGrid = (size) => {
         container.appendChild(row);
     }
 }
-createGrid(2);
+
+const deleteGrid = () => {
+    
+}
+
+createGrid(64);
