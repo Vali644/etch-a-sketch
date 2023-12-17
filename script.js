@@ -40,7 +40,6 @@ const createGrid = (size) => {
                     rgbValues[1] -= percent[1];
                     rgbValues[2] -= percent[2];
                     segment.style.backgroundColor = `rgb(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]})`;
-                    console.log(percent);
                 }
             })
             row.appendChild(segment);
