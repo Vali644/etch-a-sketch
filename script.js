@@ -23,11 +23,25 @@ const createGrid = (size) => {
         for (let i = 0; i < size; i++) {
             let segment = document.createElement('div');
             segment.style.flexGrow = '1';
+            let percent = [0.0, 0.0, 0.0];
+            let rgbValues = [0, 0, 0];
+            segment.style.backgroundColor = 'rgb(255, 255, 255)';
             segment.addEventListener("mouseover", () => {
-                let r = Math.floor(Math.random() * 256);
-                let g = Math.floor(Math.random() * 256);
-                let b = Math.floor(Math.random() * 256);
-                segment.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                if (window.getComputedStyle(segment, null).getPropertyValue("background-color") == 'rgb(255, 255, 255)') {
+                    rgbValues[0] = Math.floor(Math.random() * 256);
+                    rgbValues[1] = Math.floor(Math.random() * 256);
+                    rgbValues[2] = Math.floor(Math.random() * 256);
+                    percent[0] = rgbValues[0] / 10;
+                    percent[1] = rgbValues[1] / 10;
+                    percent[2] = rgbValues[2] / 10;
+                    segment.style.backgroundColor = `rgb(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]})`;
+                } else if (window.getComputedStyle(segment, null).getPropertyValue("background-color") != 'rgb(0, 0, 0)') {
+                    rgbValues[0] -= percent[0];
+                    rgbValues[1] -= percent[1];
+                    rgbValues[2] -= percent[2];
+                    segment.style.backgroundColor = `rgb(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]})`;
+                    console.log(percent);
+                }
             })
             row.appendChild(segment);
         }

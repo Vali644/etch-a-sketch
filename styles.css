@@ -21,9 +21,19 @@ body {
     flex-direction: column;
     border: rgb(106, 106, 255) 10px solid;
     border-radius: 10px;
-    background-color: rgb(195, 195, 248)
+    background-color: rgb(255, 255, 255)
 }
 
 #size {
-    margin: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color:rgb(34, 82, 240);
+    color: white;
+    border:rgb(106, 106, 255) 5px solid;
+    border-radius: 4px;
+}
+
+h1 {
+    color: white;
+    margin: 30px;
 }
